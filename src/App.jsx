@@ -371,7 +371,7 @@ export default function App() {
     <div>
       <div>
         <h1>BIRROTEK</h1>
-        <p>Eres quien lleva la contabilidad</p>
+        <p>Eres quien lleva la contabilidad</p>   
       </div>
       <div>
         <button onClick={() => setVentaRapida(true)}>Venta Rápida</button>
