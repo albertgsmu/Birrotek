@@ -2,6 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+/* =========================
+   FIX CRÍTICO PARA VERCEL
+   ========================= */
+
+/* Asegura que la app esté por encima del fondo */
+#root {
+  position: relative;
+  z-index: 10;
+  min-height: 100vh;
+}
+
+/* Si tienes fondos animados, grids o canvas */
+.background,
+.bg-grid,
+canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* =========================
+   TUS CLASES (NO TOCADAS)
+   ========================= */
+
 .btn-green {
   @apply bg-green-600 hover:bg-green-700 px-4 py-2 rounded font-bold;
 }
