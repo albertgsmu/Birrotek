@@ -8,8 +8,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <App />
   </React.StrictMode>
 );
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", () => {
-    //navigator.serviceWorker.register("/service-worker.js");
-  });
+if ('serviceWorker' in navigator && import.meta.env.PROD) {
+  if (location.hostname !== 'albertgsmu.github.io') {
+    navigator.serviceWorker.register('/service-worker.js')
+  }
 }
